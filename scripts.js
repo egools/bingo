@@ -1,5 +1,6 @@
 
 let boardFilled = false;
+let boardElm = document.getElementById("bingoBoard");
 let board = [
     [false, false, false, false, false],
     [false, false, false, false, false],
@@ -27,8 +28,8 @@ function fillBoard() {
     }
 
     if (fillit) {
-
-        let rows = document.querySelectorAll(".bingo-board .cell-row");
+        boardElm.classList.remove("winner-board");
+        let rows = document.querySelectorAll("#bingoBoard .cell-row");
         let cells = [...rows].map(r => {
             return r.querySelectorAll(".bingo-cell");
         });
@@ -93,6 +94,10 @@ function cellClickEvent() {
         for (const cell of winner) {
             document.querySelector(`.bingo-cell[data-row='${cell[0]}'][data-col='${cell[1]}']`).classList.add("winner-cell");
         }
+        boardElm.classList.add("winner-board");
+    }
+    else if(boardElm.classList.contains("winner-board")){
+        boardElm.classList.remove("winner-board");
     }
 }
 
