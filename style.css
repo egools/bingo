@@ -129,8 +129,11 @@ button:hover {
     0% {
         transform: translate(-50%, -50%) scale(1.0);
     }
-    100% {
+    50% {
         transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.0);
     }
   }
 
@@ -138,7 +141,7 @@ button:hover {
     animation-name: winnerwinner;
     animation-iteration-count: 5;
     animation-direction: alternate;
-    animation-duration: 0.75s;
+    animation-duration: 1.25s;
 }
 
 
@@ -146,7 +149,7 @@ button:hover {
 {
     .bingo-board {
         width: 85%;
-        height: 75%;
+        height: 80%;
     }
 
     html {
