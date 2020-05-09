@@ -7,7 +7,7 @@
 
     <title>B-B-B-B-B-BINGO</title>
     <meta name="description" content="B-B-B-B-B-BINGO" />
-    <meta name="author" content="Gools" />
+    <meta name="audivor" content="Gools" />
     <link rel="shortcut icon" href="favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=1.0" />
@@ -15,67 +15,54 @@
 </head>
 
 <body>
-    <table class="bingo-board">
-        <thead>
-            <tr>
-                <th width="20%">B</th>
-                <th width="20%">I</th>
-                <th width="20%">N</th>
-                <th width="20%">G</th>
-                <th width="20%">O</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-            </tr>
-            <tr>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-            </tr>
-            <tr>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-            </tr>
-            <tr>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-            </tr>
-            <tr>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-                <td><span class="bingo-cell"></span></td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="5">
-                    <button type="button" onclick="fillBoard()">Fill Board</button>
-                </td>
-            </tr>
-        </tfoot>
-    </table>
+    <div class="bingo-board">
+        <div class="bingo-row header-row">
+            <div>B</div>
+            <div>I</div>
+            <div>N</div>
+            <div>G</div>
+            <div>O</div>
+        </div>
+        <div class="bingo-row cell-row">
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+        </div>
+        <div class="bingo-row cell-row">
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+        </div>
+        <div class="bingo-row cell-row">
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+        </div>
+        <div class="bingo-row cell-row">
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+        </div>
+        <div class="bingo-row cell-row">
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+            <div><span class="bingo-cell">&nbsp;</span></div>
+        </div>
+        <div class="control-row">
+            <button type="button" onclick="fillBoard()">Fill Board</button>
+        </div>
+    </div>
     <script src="scripts.js"></script>
-    <script type="text/javascript">
-        (function () {
-
-        })();
-    </script>
 </body>
 
 </html>

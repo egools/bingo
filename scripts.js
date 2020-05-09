@@ -28,7 +28,7 @@ function fillBoard() {
 
     if (fillit) {
 
-        let rows = document.querySelectorAll(".bingo-board tbody tr");
+        let rows = document.querySelectorAll(".bingo-board .cell-row");
         let cells = [...rows].map(r => {
             return r.querySelectorAll(".bingo-cell");
         });
