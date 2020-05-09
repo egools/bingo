@@ -144,6 +144,32 @@ button:hover {
     animation-duration: 1.25s;
 }
 
+@keyframes nice {
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+        color: #f0aeae;
+    }
+}
+
+.nice:before {
+    opacity: 0;
+    content: 'nice';
+    font-size: 20rem;
+    color: white;
+    position: fixed;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transform-origin: bottom center;
+    animation-name: nice;
+    animation-iteration-count: 3;
+    animation-direction: alternate-reverse;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    
+}
+
 
 @media (orientation:portrait)
 {

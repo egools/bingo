@@ -46,10 +46,14 @@ function fillBoard() {
                 let index = Math.floor(Math.random() * validNums[col].length);
                 let num = validNums[col][index];
                 validNums[col].splice(index, 1);
-                
+
                 cell.classList.remove("winner-cell");
                 cell.classList.remove("binged");
                 cell.classList.remove("has-value");
+                cell.classList.remove("nice");
+                if (num === 69)
+                    cell.classList.add("nice");
+
                 setTimeout(() => {
                     cell.classList.add("has-value");
                     cell.innerHTML = num;
