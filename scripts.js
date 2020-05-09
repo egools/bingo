@@ -46,11 +46,15 @@ function fillBoard() {
                 let index = Math.floor(Math.random() * validNums[col].length);
                 let num = validNums[col][index];
                 validNums[col].splice(index, 1);
-                cell.innerHTML = num;
-                cell.classList.remove("binged");
+                
                 cell.classList.remove("winner-cell");
-                if (!boardFilled) {
+                cell.classList.remove("binged");
+                cell.classList.remove("has-value");
+                setTimeout(() => {
                     cell.classList.add("has-value");
+                    cell.innerHTML = num;
+                }, 200);
+                if (!boardFilled) {
                     cell.dataset.col = col;
                     cell.dataset.row = row;
                 }
