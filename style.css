@@ -1,1 +1,100 @@
 
+html, body {
+    background: url('drew-beamer-qzWwb2UdGhE-unsplash.jpg');
+    font-family: 'Roboto Slab', serif;
+}
+
+.bingo-board {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-spacing: 5px;
+    background: rgb(251, 255, 253);
+    border-radius: 5px;
+    box-shadow: 11px 6px 15px 2px rgba(50, 50, 50, 0.5);
+    border: 2px solid #356757;
+}
+
+.bingo-board th{
+    color: #356757;
+    font-size:70px;
+    text-align: center;
+    text-shadow: #214136 2px 1px;
+}
+
+.bingo-board tbody td {
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: #356757;
+}
+
+tfoot td {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.bingo-cell {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 4px solid transparent;
+    text-align: center;
+    line-height: 50px;
+    font-size: 35px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.bingo-cell.has-value:hover
+{
+    border-color: #fd999977;
+    cursor: pointer;
+}
+
+.bingo-cell.binged {
+    background-color:#be2c2c;
+}
+
+button {
+    background: transparent;
+    color: #356757;
+    font-family: 'Roboto Slab', serif;
+    border: 2px solid #356757;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: none;
+    padding: 5px 10px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+button:hover {
+    color: white;
+    background: #356757;
+}
+
+
+
+@keyframes winnerwinner {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.3);
+    }
+  }
+
+  .winner-cell {
+    animation-name: winnerwinner;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+}
