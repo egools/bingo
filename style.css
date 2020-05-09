@@ -22,7 +22,7 @@ html {
     background: rgb(251, 255, 253);
     border-radius: 5px;
     box-shadow: 11px 6px 15px 2px rgba(50, 50, 50, 0.5);
-    border: 2px solid #356757;
+    border: 2px solid red;
 }
 
 .bingo-row {
@@ -53,6 +53,7 @@ html {
     color: white;
     font-weight: bold;
     background-color: #356757;
+    border-radius: 3px;
 }
 
 .control-row {
