@@ -95,6 +95,5 @@ button:hover {
     animation-name: winnerwinner;
     animation-iteration-count: 5;
     animation-direction: alternate;
-    animation-delay: 0.2s;
-    animation-duration: 1s;
+    animation-duration: 0.75s;
 }

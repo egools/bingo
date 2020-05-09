@@ -33,17 +33,27 @@ function fillBoard() {
             return r.querySelectorAll(".bingo-cell");
         });
 
+        let validNums = [
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+            [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+            [31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45],
+            [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60],
+            [61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75]
+        ];
         for (var row = 0; row < 5; row++) {
             for (var col = 0; col < 5; col++) {
-                let max = 15 * (col + 1);
-                let min = max - 14;
-                let num = Math.floor(Math.random() * (max - min + 1)) + min;
-                cells[row][col].innerHTML = num;
-                cells[row][col].classList.add("has-value");
-                cells[row][col].classList.remove("binged");
-                cells[row][col].classList.remove("winner-cell");
-                cells[row][col].dataset.col = col;
-                cells[row][col].dataset.row = row;
+                const cell = cells[row][col];
+                let index = Math.floor(Math.random() * validNums[col].length);
+                let num = validNums[col][index];
+                validNums[col].splice(index, 1);
+                cell.innerHTML = num;
+                cell.classList.remove("binged");
+                cell.classList.remove("winner-cell");
+                if (!boardFilled) {
+                    cell.classList.add("has-value");
+                    cell.dataset.col = col;
+                    cell.dataset.row = row;
+                }
             }
         }
         if (!boardFilled)
